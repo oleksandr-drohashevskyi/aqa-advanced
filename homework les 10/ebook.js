@@ -3,7 +3,7 @@ import { Book } from "./book.js";
 export class EBook extends Book {
   constructor(title, author, year, fileFormat) {
     super(title, author, year);
-    this.fileFormat = fileFormat; 
+    this.fileFormat = fileFormat;
   }
 
   get fileFormat() {
@@ -13,17 +13,15 @@ export class EBook extends Book {
     if (typeof value !== "string" || value.trim() === "") {
       throw new Error("fileFormat має бути непорожнім рядком");
     }
-    this._fileFormat = value.trim(); 
+    this._fileFormat = value.trim();
   }
-
 
   printInfo() {
     console.log(
-      `Назва: ${this.title}, Автор: ${this.author}, Рік: ${this.year}, Формат: ${this.fileFormat}`
+      `Назва: ${this.title}, Автор: ${this.author}, Рік: ${this.year}, Формат: ${this.fileFormat}`,
     );
   }
 
-  
   static fromBook(book, format) {
     if (!(book instanceof Book)) {
       throw new Error("Перший аргумент має бути екземпляром Book");

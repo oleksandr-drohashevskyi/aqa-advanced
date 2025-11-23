@@ -1,17 +1,17 @@
 let x; //текст
-x='this is string type'
+x = "this is string type";
 console.log(x);
 
-let y=10; // число
+let y = 10; // число
 console.log(y);
 
 let z; //boolean
-z=true
+z = true;
 console.log(z);
 
 let n; // null
-n=null;
+n = null;
 console.log(n);
 
-let un //undefined
+let un; //undefined
 console.log(un);
