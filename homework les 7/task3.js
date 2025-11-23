@@ -1,6 +1,10 @@
 function divide(numerator, denominator) {
-  if (typeof numerator !== "number" || typeof denominator !== "number" ||
-      !Number.isFinite(numerator) || !Number.isFinite(denominator)) {
+  if (
+    typeof numerator !== "number" ||
+    typeof denominator !== "number" ||
+    !Number.isFinite(numerator) ||
+    !Number.isFinite(denominator)
+  ) {
     throw new TypeError("Обидва аргументи мають бути числами.");
   }
 
@@ -37,4 +41,3 @@ try {
 } finally {
   console.log("Робота завершена");
 }
-

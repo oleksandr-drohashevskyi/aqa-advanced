@@ -1,12 +1,12 @@
 function rec(num) {
-    console.log(num)
-    if (num<=0){
-        return;
-    }
-    rec(num-1)
+  console.log(num);
+  if (num <= 0) {
+    return;
+  }
+  rec(num - 1);
 }
 
-rec(5)
+rec(5);
 
 //те саме через цикл походу можна зробити
 // function rec2(num){

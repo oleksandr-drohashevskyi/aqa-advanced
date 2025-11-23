@@ -1,11 +1,10 @@
 export class Book {
   constructor(title, author, year) {
-    this.title = title;   
-    this.author = author; 
-    this.year = year;    
+    this.title = title;
+    this.author = author;
+    this.year = year;
   }
 
- 
   get title() {
     return this._title;
   }
@@ -39,7 +38,9 @@ export class Book {
   }
 
   printInfo() {
-    console.log(`Назва: ${this.title}, Автор: ${this.author}, Рік: ${this.year}`);
+    console.log(
+      `Назва: ${this.title}, Автор: ${this.author}, Рік: ${this.year}`,
+    );
   }
 
   static oldest(books) {
@@ -47,7 +48,7 @@ export class Book {
       throw new Error("Передайте масив книг");
     }
 
-    const list = books.filter(b => b instanceof Book);
+    const list = books.filter((b) => b instanceof Book);
     if (list.length === 0) throw new Error("У масиві немає екземплярів Book");
     return list.reduce((oldest, b) => (b.year < oldest.year ? b : oldest));
   }
